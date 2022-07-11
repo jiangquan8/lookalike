@@ -71,7 +71,7 @@ index = faiss.IndexProxy()
 for sub_index in indexes:
     index.addIndex(sub_index)
     
-index.train(pin_data_drop_new) #影响PQ的时间的因素？？？
+index.train(pin_data_drop_new)
 print(index.is_trained)
 
 index.add(pin_data_drop_new)
