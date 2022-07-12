@@ -82,5 +82,3 @@ beg = time.time()
 query_self = pin_data_drop_new[:200000]  # 查询本身
 dis, ind = index.search(query_self, k)     #查询自身
 print(time.time()-beg)
-print(dis)
-print(ind)
