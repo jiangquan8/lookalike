@@ -10,7 +10,6 @@ def train_coarse_quantizer(data, quantizer_path, num_clusters, hnsw=False,PQ=Fal
     d = data.shape[1]
 
     index_flat = faiss.IndexFlatL2(d)  #初始化量化器
-    # make it into a gpu index
     if cuda:
         res = faiss.StandardGpuResources()
         index_flat = faiss.index_cpu_to_gpu(res, 1, index_flat)
